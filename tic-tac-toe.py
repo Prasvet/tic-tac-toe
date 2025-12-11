@@ -40,18 +40,17 @@ def resetField():
     switch_all_buttons()
     startButton.focus_set()
 
-def cutEmptyCells(x, y):
-    """ Удаляет один возможный ход из списка возможных ходов
+def cutEmptyCells(x: int, y: int) -> None:
+    """ Удаляет один ход из списка возможных ходов
     """
     for i in range(len(possible_moves)):
         if (possible_moves[i][0] == x and possible_moves[i][1] == y):
             del possible_moves[i]
             return
 
-# Тест на ничью
 
-
-def drawTest():
+def drawTest() -> bool:
+    """Тест на ничью"""
     for L in range(countPlayers):
         listTest = []  # Список для проверки
 
