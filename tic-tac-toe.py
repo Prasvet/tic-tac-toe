@@ -1,7 +1,8 @@
 # from itertools import chain
 from tkinter import *
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, PhotoImage
 from random import randint
+
 import glob
 from time import sleep
 from tkinter.messagebox import showinfo
@@ -451,7 +452,7 @@ root.resizable(False, False)
 root.title("Крестики-Нолики")
 
 # Иконка
-# root.iconbitmap("icon/icon.ico")
+root.iconphoto(False, PhotoImage(file="icon/icon.png"))
 
 # Цвета
 back = "#373737"
